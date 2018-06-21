@@ -27,7 +27,7 @@ class Authrule extends Admin
 	 * @author chengbin
 	 * @return mixed
 	 */
-	public function getData()
+	/*public function getData()
 	{
 		if(!request()->isAjax()) {
 			$this->error(lang('Request type error'), 4001);
@@ -36,14 +36,14 @@ class Authrule extends Admin
 
 		$data = model('AuthRule')->getList( $request );
 		return $data;
-	}
+	}*/
 
 	/**
 	 * 添加规则
 	 *
 	 * @author chengbin
 	 */
-	public function add()
+	/*public function add()
 	{
 		return view();
 	}
@@ -55,24 +55,24 @@ class Authrule extends Admin
 		$ids = model('AuthAccess')->getIds( $this->uid );
 		$this->assign('rule_ids', $ids);
 		return view();
-	}
+	}*/
 
 	/**
 	 * 编辑规则
 	 *
 	 * @author chengbin
 	 */
-	public function edit( $id = '' )
+	/*public function edit( $id = '' )
 	{
 		$data = model('AuthRule')->get(['id'=>$id]);
 		$this->assign( 'data', $data );
 		return view();
-	}
+	}*/
 
 	/**
 	 * 保存数据
 	 */
-	public function saveData()
+	/*public function saveData()
 	{
 		$this->mustCheckRule( 'admin/authrule/edit' );
 		if(!request()->isAjax()) {
@@ -81,12 +81,12 @@ class Authrule extends Admin
 		$data = input('post.');
 		model('AuthRule')->saveData($data);
 		$this->success(lang('Save success'));
-	}
+	}*/
 
 	/**
 	 * 删除
 	 */
-	public function delete($id = 0){
+	/*public function delete($id = 0){
 		if(empty($id)){
 			return info(lang('Data ID exception'), 0);
 		}
@@ -104,5 +104,5 @@ class Authrule extends Admin
 		if ($res['code'] == 1) {
 			return $this->success();
 		}
-	}
+	}*/
 }

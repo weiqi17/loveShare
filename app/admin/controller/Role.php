@@ -28,7 +28,7 @@ class Role extends Admin
         return view();
     }
 
-    public function getList()
+    /*public function getList()
     {
         if(!request()->isAjax()) {
             $this->error(lang('Request type error'), 4001);
@@ -37,9 +37,9 @@ class Role extends Admin
         $request = request()->param();
         $data = model('Role')->getList( $request );
         return $data;
-    }
+    }*/
 
-    public function add()
+   /* public function add()
     {
         return $this->fetch('edit');
     }
@@ -60,16 +60,16 @@ class Role extends Admin
         }
         $data = input('post.');
         return model('role')->saveData( $data );
-    }
+    }*/
 
     /**
      * 删除
      * @param  string $id 数据ID（主键）
      */
-    public function delete($id = 0){
+   /* public function delete($id = 0){
         if(empty($id)){
             return info(lang('Data ID exception'), 0);
         }
         return model('Role')->deleteById($id);
-    }
+    }*/
 }
