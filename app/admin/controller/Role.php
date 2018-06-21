@@ -17,7 +17,7 @@ class Role extends Admin
     function _initialize()
     {
         parent::_initialize();
-        $this->role = Loader::model('role');
+        //$this->role = Loader::model('role');
     }
 
     /**
