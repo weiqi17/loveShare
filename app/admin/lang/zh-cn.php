@@ -67,6 +67,9 @@ return [
     'Adress' =>'安装地址',
     'Processing' =>'是否处理',
     'Process Detail'=>'处理信息',
+    'AvtivityType'=>'活动类型',
+    'Buy Time' =>'购买时间',
+    'End Time' =>'到期时间',
     // 'Please Enter The Correct Length' => '长度验证错误',
     'Up_characters' =>  '至多{:langth}字符',
     'Range_characters'  =>  '{:minLangth}-{:maxLangth}字符',
@@ -97,5 +100,6 @@ return [
     'InstallManage' =>'报装管理',
     'AgencyManage'  =>'代理管理',
     'ApplicationRecord'=>'申请记录',
+    'PurchaseInformation' =>'购买信息',
 
 ];

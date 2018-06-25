@@ -3,28 +3,6 @@
 TP-admin即基于ThinkPHP5拿来即用高性能后台管理系统
 
 
-## 官方文档
-地址：[http://doc.tpadmin.shijinrong.cn/](http://doc.tpadmin.shijinrong.cn/)
-
-## 在线体验
-
-地址：[http://tpadmin.shijinrong.cn/admin/](http://tpadmin.shijinrong.cn/admin/)
-
-账户：13330613321
-
-密码：123456
-
-
-## 线上仓库
-
-在线地址：[https://github.com/Astonep/tp-admin](https://github.com/Astonep/tp-admin)
-
-### 源代码下载
-
-**git克隆**：``git clone https://github.com/Astonep/tp-admin`` 
-
-**直接下载**：[https://github.com/Astonep/tp-admin/archive/master.zip](https://github.com/Astonep/tp-admin/archive/master.zip) 
-
 ## 本地部署
 
 **运行环境要求**
@@ -44,18 +22,6 @@ TP-admin即基于ThinkPHP5拿来即用高性能后台管理系统
 
 除非
 > 你是一名高级PHPer，也可以为每一个模块自定义入口文件
-
-
-**部署完成后**
-
-~~~
-cd tp-admin/
-
-composer install  // 安装依赖
-
-http://your-domain/ 例如虚拟域名配置为www.web.com 则http://www.web.com
-~~~
-
 
 **详细参考**[ThinkPHP5官方手册中的部署部分](http://www.kancloud.cn/manual/thinkphp5/129745)官方手册更加完善且很清楚
 
@@ -78,8 +44,6 @@ TP-admin即基于ThinkPHP5的admin后台管理系统
 - **异步请求**：保护好全局污染
 
 
-### 支持TP-admin的用户请到 [GitHub](https://github.com/Astonep/tp-admin) 给我们一个star ^_^
-
 ### 为什么要选择TP5
 因为TP5在框架中就有如下高级特性
 * * * * *
@@ -100,6 +64,3 @@ TP-admin即基于ThinkPHP5的admin后台管理系统
 
 > 在此非常感谢各框架、插件、平台的支持
 
-
-## 交流
-- 问题只接受来自[Github上Issues](https://github.com/Astonep/tp-admin/issues)《源码附截图，并描述清楚

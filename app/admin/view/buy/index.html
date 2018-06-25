@@ -1,0 +1,45 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins" style="background: white;padding: 10px">
+                <!-- 表单标题概要 -->
+                <div class="ibox-title">
+                    <h5>{:lang('Activity List')}</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 表单内容 -->
+                <div class="ibox-content">
+                    <!-- 用户控件（操作） -->
+                    <!--{toolbar id="toolbar"}
+                    {/toolbar}-->
+
+                    <!-- 表格数据 -->
+                    <table id="table" data-toggle="gridview" class="table"
+                           data-url="{:url('admin/buy/getMessage')}" data-toolbar="#toolbar"
+                           data-show-columns="true" data-page-size="10" data-page-list="[10, 25, 50, All]"
+                           data-unique-id="id" data-pagination="true" data-side-pagination="client"
+                           data-search="true" data-click-to-select="false">
+                        <thead>
+                        <tr>
+                            <th data-width="10" data-align="center" data-checkbox="true"></th>
+                            <th data-width="10" data-field="id" >ID</th>
+                            <th data-width="20" data-field="username" >{:lang('Name')}</th>
+                            <th data-width="20" data-field="type" >{:lang('AvtivityType')}</th>
+                            <th data-width="20" data-field="price" >{:lang('Price')}</th>
+                            <th data-width="20" data-field="buy_time" >{:lang('Buy Time')}</th>
+                            <th data-width="20" data-field="end_time" >{:lang('End Time')}</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
