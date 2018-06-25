@@ -15,6 +15,33 @@ class Install extends Common
 {
     public function insertOne($con)
     {
-        $res = $this->insert($con);
+        return $res = $this->insert($con);
+    }
+    function getAll()
+    {
+        try {
+            $res = $this->field("install.id,user.username,install.buildtime,
+            install.adress,install.detailadress,install.processing,install.detailpro,install.createtime")
+                ->table(['user','install'])
+                ->where('user.id = install.u_id')
+                ->order('install.createtime ASC')->select();
+
+        } catch (\Exception $e) {
+            $res = $e->getMessage();
+        }
+        return $res;
+    }
+    function updateRecord($con)
+    {
+        if (empty($con))
+            return "参数错误！";
+
+        try {
+            $res = $this->where('id = '.$con['id'])
+                ->update(['processing'=>$con['processing'],'detailpro' =>$con['detailpro']]);
+        } catch (\Exception $e) {
+            $res = $e->getMessage();
+        }
+        return $res;
     }
 }
