@@ -87,6 +87,7 @@ return [
     'SysError' => '系统发生错误',
     'Back' => '返回',
     'Login' => '登录',
+    'Repair Time'=>'维修时间',
     'Click On The Image Change One' => '看不清，点击图片换一张',
 
     // 菜单列表 不支持数组
@@ -101,5 +102,6 @@ return [
     'AgencyManage'  =>'代理管理',
     'ApplicationRecord'=>'申请记录',
     'PurchaseInformation' =>'购买信息',
+    'RepairManage' =>'报修管理'
 
 ];

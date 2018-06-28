@@ -1,5 +1,6 @@
 <!-- Data Tables -->
 
+<!--添加-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -12,63 +13,58 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <form  id ='searchForm' class="bs-example bs-example-form" role = "form">
+                <form  id ='searchForm' class="bs-example bs-example-form" role = "form"
+                       enctype="multipart/form-data" action="{:url('admin/activity/upload')}" method="post">
                     <div class = "input-group" >
-                        <span class="input-group-addon text-center">标题   </span>
-                        <input type = "text" class=" form-control"
-                               id="mo.title" placeholder="标题">
+                        <span  class="input-group-addon text-center">标题</span>
+                        <input type = "text" name="title" class=" form-control" id="title" placeholder="标题">
                     </div>
                     <div class = "input-group">
                         <span class = "input-group-addon">子标题</span>
                         <input type = "text" class = "form-control"  placeholder="子标题" name="subtitle1"
-                               id="mo.title1">
+                               id="title1">
                     </div>
                     <div class = "input-group">
-                        <span class = "input-group-addon">子标题</span>
+                        <span class = "input-group-addon" >子标题</span>
                         <input type = "text" class = "form-control"  placeholder="子标题" name="subtitle2"
-                               id="mo.title2">
+                               id="title2">
                     </div>
                     <div class = "input-group" >
                         <span class="input-group-addon text-center">价格</span>
                         <input type = "text"  class=" form-control" name="price"
-                               id="mo.price" placeholder="价格">
+                               id="price" placeholder="价格">
                     </div>
                     <div class = "input-group" >
                         <span class="input-group-addon text-center" >价格</span>
-                        <input type = "text"  class=" form-control" name="price"
-                               id="mo.price1" placeholder="价格">
+                        <input type = "text"  class=" form-control" name="price1"
+                               id="price1" placeholder="价格">
                     </div>
                     <div class = "input-group" >
                         <span class="input-group-addon text-center">价格</span>
-                        <input type = "text"  class=" form-control" name="price"
-                               id="mo.price2" placeholder="价格">
+                        <input type = "text"  class=" form-control" name="price2"
+                               id="price2" placeholder="价格">
                     </div>
                     <div class = "input-group" >
 
                         <span class="input-group-addon text-center">内容</span>
                         <input type = "text"  class=" form-control"
-                               id="mo.conten"  placeholder="内容">
+                               id="content" name="content" placeholder="内容">
                     </div>
                     <div class = "input-group" >
 
                         <span class="input-group-addon text-center">内容</span>
                         <input type = "text"  class=" form-control"
-                               id="mo.conten1"  placeholder="内容">
+                               id="content1" name="content1" placeholder="内容">
                     </div>
                     <div class = "input-group" >
-
                         <span class="input-group-addon text-center">内容</span>
                         <input type = "text"  class=" form-control"
-                               id="mo.conten2"  placeholder="内容">
+                               id="content2" name="content2"  placeholder="内容">
                     </div>
-                    <div class = "input-group" >
-                        <span class="input-group-addon text-center">图片</span>
-                        <input type = "text"  class=" form-control"  name="text"id="mo.pictur"  >
-                    </div>
-                    <div class = "input-group" >
-                        <span class="input-group-addon text-center">详细图片</span>
-                        <input type = "text"  class=" form-control"  id="mo.detailpic"  >
-                    </div>
+                    <span class="input-group-addon text-center">图片</span>
+                    <input type="file" name="pic" id="pic" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="multiple" />
+                    <span class="input-group-addon text-center">详细图片</span>
+                    <input type="file" name="detailpic" id="detailpic" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="multiple" />
                 </form>
             </div>
             <div class="modal-footer">
@@ -81,6 +77,88 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
+<!--修改-->
+<div class="modal fade" id="emyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="emyModalLabel">
+                    修改活动
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form  id ='editForm' class="bs-example bs-example-form" role = "form"
+                       enctype="multipart/form-data" action="{:url('admin/activity/edit')}" method="post">
+                    <div class = "input-group" >
+                        <span  class="input-group-addon text-center">ID</span>
+                        <input type = "text" name="id" class=" form-control" id="eid" placeholder="ID">
+                    </div>
+                    <div class = "input-group" >
+                        <span  class="input-group-addon text-center">标题</span>
+                        <input type = "text" name="title" class=" form-control" id="etitle" placeholder="标题">
+                    </div>
+                    <div class = "input-group">
+                        <span class = "input-group-addon">子标题</span>
+                        <input type = "text" class = "form-control"  placeholder="子标题" name="subtitle1"
+                               id="etitle1">
+                    </div>
+                    <div class = "input-group">
+                        <span class = "input-group-addon" >子标题</span>
+                        <input type = "text" class = "form-control"  placeholder="子标题" name="subtitle2"
+                               id="etitle2">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center">价格</span>
+                        <input type = "text"  class=" form-control" name="price"
+                               id="eprice" placeholder="价格">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center" >价格</span>
+                        <input type = "text"  class=" form-control" name="price1"
+                               id="eprice1" placeholder="价格">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center">价格</span>
+                        <input type = "text"  class=" form-control" name="price2"
+                               id="eprice2" placeholder="价格">
+                    </div>
+                    <div class = "input-group" >
+
+                        <span class="input-group-addon text-center">内容</span>
+                        <input type = "text"  class=" form-control"
+                               id="econtent" name="content" placeholder="内容">
+                    </div>
+                    <div class = "input-group" >
+
+                        <span class="input-group-addon text-center">内容</span>
+                        <input type = "text"  class=" form-control"
+                               id="econtent1" name="content1" placeholder="内容">
+                    </div>
+                    <div class = "input-group" >
+                        <span class="input-group-addon text-center">内容</span>
+                        <input type = "text"  class=" form-control"
+                               id="econtent2" name="content2"  placeholder="内容">
+                    </div>
+                    <span class="input-group-addon text-center">图片</span>
+                    <input type="file" name="pic" id="epic" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="multiple" />
+                    <span class="input-group-addon text-center">详细图片</span>
+                    <input type="file" name="detailpic" id="edetailpic" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="multiple" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" onclick="add1()" >
+                    保存
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
@@ -108,10 +186,7 @@
                                 <i class="fa fa-plus" aria-hidden="true" style="margin-right: 2px"></i>
                                 {$Think.lang.Add}
                             </button>
-                            <button type="button" data-name="delete" class="btn btn-default">
-                                <i class="fa fa-trash" aria-hidden="true" style="margin-right: 2px"></i>
-                                {$Think.lang.Delete}
-                            </button>
+
                         </div>
                     </div>
                     <!-- 表格数据 -->
@@ -146,7 +221,41 @@
 
 <script >
     function add() {
+        /*var title = $('#title').val();
+        var title1 = $('#title1').val();
+        var title2 = $('#title2').val();
+        var price = $('#price').val();
+        var price1 = $('#price1').val();
+        var price2 = $('#price2').val();
+        var conten = $('#conten').val();
+        var conten1 = $('#conten1').val();
+        var conten2 = $('#conten2').val();*/
+        $('#searchForm').submit();
+        $('#title').val('');
+        $('#title1').val('');
+        $('#title2').val('');
+        $('#price').val('');
+        $('#price1').val('');
+        $('#price2').val('');
+        $('#content').val('');
+        $('#content1').val('');
+        $('#content2').val('');
+       // alert(title);
+
         $('#myModal').modal('hide');
+    }
+    function add1() {
+       /* $('#etitle').val('');
+        $('#etitle1').val('');
+        $('#etitle2').val('');
+        $('#eprice').val('');
+        $('#eprice1').val('');
+        $('#eprice2').val('');
+        $('#econtent').val('');
+        $('#econtent1').val('');
+        $('#econtent2').val('');*/
+       $('#editForm').submit();
+        $('#emyModal').modal('hide');
     }
     function operateFormatter(value, row, index) {
         return [
@@ -161,12 +270,21 @@
 
     var operateEvents = {
         'click .edit': function (e, value, row, index) {
-            alert(row.id);
+            //alert(row.id);
+            $('#eid').val(row.id);
+            $('#etitle').val(row.title);
+            $('#etitle1').val(row.subtitle1);
+            $('#etitle2').val(row.subtitle2);
+            $('#eprice').val(row.price1);
+            $('#eprice1').val(row.price2);
+            $('#eprice2').val(row.price3);
+            $('#econtent').val(row.content1);
+            $('#econtent1').val(row.content2);
+            $('#econtent2').val(row.content3);
+            $('#emyModal').modal('show');
         },
         'click .delete': function (e, value, row, index) {
-            //alert(row);
-            //$("#table").gridView('deleteModal', 'delete', row)
-            //alert(row.id);
+
 
             if ( confirm('确定删除选取内容？'))
             {
